@@ -1,0 +1,55 @@
+{% extends "template.html" %}
+{% block conteudo %}
+    <style>
+        .flashcard {
+            display: flex;
+            flex-direction: column;
+            width: 260px;
+            height: max-content;
+            padding: 20px;
+            margin: 10px;
+            background-color: rgb(140, 55, 219);
+            border-radius: 7px;
+        }
+
+        .index-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .flashcards-content {
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+            justify-content: center;
+
+        }
+    </style>
+
+    <div class='index-content'>
+        <div class="flashcards-content">
+            <div class="flashcard" nome="flashcard">
+                <img src="">
+                <h4>Título da nota</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi recusandae, possimus atque minus provident quo eaque ullam illo ex quibusdam, vel in! Temporibus, vitae. At minima officia corporis. Tenetur, et!</p>
+            </div>
+    
+            <div class="flashcard" nome="flashcard">
+                <img src="">
+                <h4>Título da nota</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi recusandae, possimus atque minus provident quo eaque ullam illo ex quibusdam, vel in! Temporibus, vitae. At minima officia corporis. Tenetur, et!</p>
+            </div>
+    
+            <div class="flashcard" nome="flashcard">
+                <img src="">
+                <h4>Título da nota</h4>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi recusandae, possimus atque minus provident quo eaque ullam illo ex quibusdam, vel in! Temporibus, vitae. At minima officia corporis. Tenetur, et!</p>
+            </div>
+        </div>
+    
+        <form method="POST" action="{{ url_for('logout') }}">
+            <p><button type="submit" class="btn btn-danger" style="margin-left: 160px; margin-top: 20px;">Logout</button></p>
+        </form>
+    </div>
+
+{% endblock %}
